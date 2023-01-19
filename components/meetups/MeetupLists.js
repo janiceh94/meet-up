@@ -1,5 +1,5 @@
 import MeetupItem from "./MeetupItem";
-import classes from "./MeetupList.module.css";
+import classes from "./MeetupLists.module.css";
 
 export default function MeetupList(props){
     return(
