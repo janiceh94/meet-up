@@ -1,4 +1,7 @@
+// hook that allows to directly create a reference to the DOM element in the functional component
+// can be used to store a mutable value that does not cause a re-render when updated
 import { useRef } from "react";
+
 import Card from "../ui/Card";
 import classes from "./NewMeetupForm.module.css";
 
