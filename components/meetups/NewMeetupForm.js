@@ -3,7 +3,7 @@
 import { useRef } from "react";
 
 import Card from "../ui/Card";
-import classes from "./NewMeetupForm.module.css";
+import styles from "./NewMeetupForm.module.css";
 
 export default function NewMeetupForm(props){
     const titleInputRef = useRef();
@@ -31,8 +31,8 @@ export default function NewMeetupForm(props){
 
     return (
         <Card>
-            <form className={classes.form} onSubmit={handleSubmit}>
-            <div className={classes.control}>
+            <form className={styles.form} onSubmit={handleSubmit}>
+            <div className={styles.control}>
                 <label htmlFor='title'>Meetup Title</label>
                 <input 
                     type='text' 
@@ -40,7 +40,7 @@ export default function NewMeetupForm(props){
                     ref={titleInputRef} 
                 />
             </div>
-            <div className={classes.control}>
+            <div className={styles.control}>
                 <label htmlFor='image'>Meetup Image</label>
                 <input 
                     type='url' 
@@ -48,7 +48,7 @@ export default function NewMeetupForm(props){
                     ref={imageInputRef} 
                 />
             </div>
-            <div className={classes.control}>
+            <div className={styles.control}>
                 <label htmlFor='address'>Address</label>
                 <input 
                     type='text' 
@@ -56,7 +56,7 @@ export default function NewMeetupForm(props){
                     ref={addressInputRef} 
                 />
             </div>
-            <div className={classes.control}>
+            <div className={styles.control}>
                 <label htmlFor='description'>Description</label>
                 <textarea
                     id='description'
@@ -65,7 +65,7 @@ export default function NewMeetupForm(props){
                 >
                 </textarea>
             </div>
-            <div className={classes.actions}>
+            <div className={styles.actions}>
                 <button>Add Meetup</button>
             </div>
             </form>
