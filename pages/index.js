@@ -33,6 +33,11 @@ export async function getStaticProps(){
   return {
     props: {
       meetups: DUMMY_DATA
-    }
+    },
+    // if data changes frequently
+    // revalidate takes a number (seconds) that Nextjs will wait until it  regenerates the page for an incoming request
+    // Every 10 seconds if there are requests coming in for this page, these regenerated pages would replace the old pre-generated pages
+    // Make sure data is never older than 10 seconds
+    revalidate: 10
   }
 }
