@@ -41,3 +41,18 @@ export async function getStaticProps(){
     revalidate: 10
   }
 }
+
+//----OR-----
+// User has access to fresh data every single time the page is updated
+// Good for apps which the data changes really fast
+
+// export async function getServerSideProps(context){
+//   const req = context.req;
+//   const res = context.res;
+//   //fetch data from an API
+//   return {
+//     props: {
+//       meetups: DUMMY_DATA
+//     }
+//   }
+// }
