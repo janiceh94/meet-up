@@ -18,10 +18,21 @@ const DUMMY_DATA = [
 ];
 
 
-export default function HomePage(){
+export default function HomePage(props){
   return (
     <div>
-        <MeetupList meetups={DUMMY_DATA}/>
+        <MeetupList meetups={props.meetups}/>
     </div>
   )
+}
+
+// How to move data fetching away from client to the server-side
+// must be named getStaticProps
+export async function getStaticProps(){
+  // fetch data from an API
+  return {
+    props: {
+      meetups: DUMMY_DATA
+    }
+  }
 }
